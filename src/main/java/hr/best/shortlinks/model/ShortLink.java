@@ -2,6 +2,10 @@ package hr.best.shortlinks.model;
 
 import javax.persistence.*;
 
+/**
+ * Model class for link entry
+ * This class translates into database table
+ */
 @Entity(name="shortlink")
 @Table
 public class ShortLink {
@@ -20,9 +24,20 @@ public class ShortLink {
     private String siteUrl;
     private String shortenedUrl;
 
+    // empty constructor
     public ShortLink() {
     }
 
+    /**
+     * This constructor does not contain id, as the id will be generated
+     * by generator when accessing the database, in this example
+     * Sequence Generator will be used which will increase id of an entry
+     * by 1 every time new entry is written to the database
+     *
+     * @param name name of the entry
+     * @param siteUrl url which needs to be shortened
+     * @param shortenedUrl desired shortened or altered url
+     */
     public ShortLink(String name, String siteUrl, String shortenedUrl) {
         this.name = name;
         this.siteUrl = siteUrl;

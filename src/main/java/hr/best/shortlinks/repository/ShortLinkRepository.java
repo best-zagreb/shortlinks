@@ -7,6 +7,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/**
+ * This interface is the data access layer of the application
+ * It extends JpaRepository which provides basic operations
+ * on the database table (no need to write baseic SQL queries)
+ */
 @Repository
 public interface ShortLinkRepository extends JpaRepository<ShortLink, Long> {
 
