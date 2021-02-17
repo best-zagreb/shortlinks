@@ -17,23 +17,23 @@ public class ShortLink {
     )
     private Long id;
     private String name;
-    private String incomingUrl;
-    private String outcomingUrl;
+    private String siteUrl;
+    private String shortenedUrl;
 
     public ShortLink() {
     }
 
-    public ShortLink(String name, String incomingUrl, String outcomingUrl) {
+    public ShortLink(String name, String siteUrl, String shortenedUrl) {
         this.name = name;
-        this.incomingUrl = incomingUrl;
-        this.outcomingUrl = outcomingUrl;
+        this.siteUrl = siteUrl;
+        this.shortenedUrl = shortenedUrl;
     }
 
-    public ShortLink(Long id, String name, String incomingUrl, String outcomingUrl) {
+    public ShortLink(Long id, String name, String siteUrl, String shortenedUrl) {
         this.id = id;
         this.name = name;
-        this.incomingUrl = incomingUrl;
-        this.outcomingUrl = outcomingUrl;
+        this.siteUrl = siteUrl;
+        this.shortenedUrl = shortenedUrl;
     }
 
     public Long getId() {
@@ -52,20 +52,20 @@ public class ShortLink {
         this.name = name;
     }
 
-    public String getIncomingUrl() {
-        return incomingUrl;
+    public String getSiteUrl() {
+        return siteUrl;
     }
 
-    public void setIncomingUrl(String from) {
-        this.incomingUrl = from;
+    public void setSiteUrl(String from) {
+        this.siteUrl = from;
     }
 
-    public String getOutcomingUrl() {
-        return outcomingUrl;
+    public String getShortenedUrl() {
+        return shortenedUrl;
     }
 
-    public void setOutcomingUrl(String to) {
-        this.outcomingUrl = to;
+    public void setShortenedUrl(String to) {
+        this.shortenedUrl = to;
     }
 
     @Override
@@ -73,8 +73,8 @@ public class ShortLink {
         return "LinkService{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", from='" + incomingUrl + '\'' +
-                ", to='" + outcomingUrl + '\'' +
+                ", from='" + siteUrl + '\'' +
+                ", to='" + shortenedUrl + '\'' +
                 '}';
     }
 }
